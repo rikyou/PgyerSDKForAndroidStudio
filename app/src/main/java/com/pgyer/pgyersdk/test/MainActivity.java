@@ -18,6 +18,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         init();
+
     }
 
     private void init()
@@ -30,6 +31,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         btnOpenFeedback.setOnClickListener(this);
         Button btnCloseFeedback = (Button) findViewById(R.id.btnCloseFeedback);
         btnCloseFeedback.setOnClickListener(this);
+
     }
 
     private void testCrashReport()
@@ -43,7 +45,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
             case R.id.btnCheckUpdate:
                 PgyUpdateManager.register(MainActivity.this, Constants.APPID, new UpdateManagerListener() {
                     @Override
-                    public void onUpdateAvailable() {
+                    public void onUpdateAvailable(String result) {
                         // TODO Auto-generated method stub
                         Toast.makeText(MainActivity.this, "有新的版本", Toast.LENGTH_SHORT).show();
                     }
