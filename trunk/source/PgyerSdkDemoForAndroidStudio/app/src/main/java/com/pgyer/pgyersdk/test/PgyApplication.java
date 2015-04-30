@@ -3,7 +3,7 @@ package com.pgyer.pgyersdk.test;
 
 import android.app.Application;
 
-import com.pgyersdk.crash.PgyCrashManager;
+//import com.pgyersdk.crash.PgyCrashManager;
 
 public class PgyApplication extends Application {
 
@@ -12,6 +12,7 @@ public class PgyApplication extends Application {
 		// TODO Auto-generated method stub
 		super.onCreate();
 		
-		PgyCrashManager.register(this,Constants.APPID);
+//		PgyCrashManager.register(this,Constants.APPID);
+
 	}
 }
