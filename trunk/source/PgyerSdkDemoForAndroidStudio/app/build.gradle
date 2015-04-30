@@ -20,7 +20,20 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:21.0.3'
-    compile files('/Users/frank/Documents/svn_client/pgyer_sdk_android/trunk/source/PgyerSdkDemoForAndroidStudio/libs/pgyer_sdk.jar')
+    compile 'com.pgyersdk:sdk:2.1.0'
+}
+
+apply plugin: 'org.quanqi.pgyer'
+
+pgyer {
+    _api_key = "b7036b03caa9bc7dd558cfcff60b21a2"
+    uKey = "175612e6609bdfd2e8e4aa7c4fc04f16"
+}
+
+apks {
+    release {
+        // 要上传的apk的路径
+        sourceFile = file("/Users/frank/Desktop/PgyerSdkDemo.apk")
+    }
 }
